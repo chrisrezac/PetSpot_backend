@@ -1,0 +1,7 @@
+{
+  name: pet.name,
+  animal_type: pet.animal_type,
+  birthday: pet.birthday,
+  breed: pet.breed,
+  image: pet.image_url
+}
