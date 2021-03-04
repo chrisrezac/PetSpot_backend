@@ -27,5 +27,29 @@ class Api::PetsController < ApplicationController
       render json: { errors: pet.errors.full_messages }, status: :bad_request
     end
   end
+  # pet update
+  def update
+    pet_id = params[:id]
+    @pet = Pet.find_by(id: pet_id)
+
+    @pet.name = params[:name] || @pet.name
+    @pet.animal_type = params[:animal_type] || @pet.animal_type
+    @pet.breed = params[:breed] || @pet.breed
+    @pet.bio = params[:bio] || @pet.bio
+    @pet.image_url = params[:image_url] || @pet.image_url
+
+    if @pet.save
+      render "show.json.jb"
+    else
+      render json: {errors: @pet.errors.full_messages}, status: 422
+    end
+  end
+  # pet delete
+  def destroy
+    user = User.find_by(id: params[:id])
+    user.destroy
+    render json: {message: "Pet successfully deleted!"}
+  end
+
 end
   
