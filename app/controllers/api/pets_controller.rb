@@ -34,6 +34,7 @@ class Api::PetsController < ApplicationController
 
     @pet.name = params[:name] || @pet.name
     @pet.animal_type = params[:animal_type] || @pet.animal_type
+    @pet.birthday = params[:birthday] || @pet.birthday
     @pet.breed = params[:breed] || @pet.breed
     @pet.bio = params[:bio] || @pet.bio
     @pet.image_url = params[:image_url] || @pet.image_url

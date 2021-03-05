@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     # user show, update, and destroy actions
     get "/users/:id" => "users#show"
     patch "/users/:id" => "users#update"
-    delete "users/:id" => "users#destroy"
+    delete "/users/:id" => "users#destroy"
 
     # pet index, show, create, update, and delete actions
 
@@ -16,5 +16,11 @@ Rails.application.routes.draw do
     post "/pets" => "pets#create"
     patch "/pets/:id" => "pets#update"
     delete "/pets/:id" => "pets#destroy"
+
+    # post show
+    get "/posts/:id" => "posts#show"
+    post "/posts" => "posts#create"
+    patch "/posts/:id" => "posts#update"
+    delete "/posts/:id" => "posts#destroy"
   end
 end

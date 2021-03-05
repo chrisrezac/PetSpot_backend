@@ -1,0 +1,6 @@
+{
+  title: @post.title,
+  body: @post.body,
+  image_url: @post.image_url,
+  pet_id: @post.pet_id
+}
