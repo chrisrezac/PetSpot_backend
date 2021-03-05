@@ -31,13 +31,14 @@ class Api::PostsController < ApplicationController
     if @post.save
       render "show.json.jb"
     else
-      render json: {errors: @post.errors_full_messages}, status: 422
+      render json: { errors: @post.errors.full_messages }, status: 422
     end
   end
+  # post delete
   def destroy
     post = Post.find_by(id: params[:id])
     post.destroy
-    render json: {message: "Post successfully destroyed!"}
+    render json: { message: "Post successfully destroyed!" }
   end
 
 end

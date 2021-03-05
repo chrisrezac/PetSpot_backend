@@ -2,7 +2,7 @@ class Api::UsersController < ApplicationController
 
   before_action :authenticate_user, except: [:show]
   
-  #create new user
+  # create new user
   def create
     user = User.new(
       email: params[:email],
@@ -17,13 +17,13 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  #show user page
+  # show user
   def show
     @user = User.find(params[:id])
     render "show.json.jb"
   end
 
-  #update user page
+  # update user
   def update
     user_id = params[:id]
     @user = User.find_by(id: user_id)
@@ -40,7 +40,7 @@ class Api::UsersController < ApplicationController
     end
   end
 
-  #delete user page
+  # delete user
   def destroy
     user = User.find_by(id: params[:id])
     user.destroy

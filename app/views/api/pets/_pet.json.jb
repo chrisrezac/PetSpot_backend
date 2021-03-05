@@ -3,7 +3,7 @@
   animal_type: pet.animal_type,
   birthday: pet.birthday,
   breed: pet.breed,
-  bio: pet.bio
+  bio: pet.bio,
   image_url: pet.image_url,
   user_id: pet.user_id
 }

@@ -1,0 +1,4 @@
+{
+  body: @comment.body,
+  user_id: @comment.user_id
+}
