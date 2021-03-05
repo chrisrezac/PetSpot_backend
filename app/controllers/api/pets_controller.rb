@@ -22,7 +22,7 @@ class Api::PetsController < ApplicationController
       breed: params[:breed],
       bio: params[:bio],
       image_url: params[:image_url],
-      user_id: params[:user_id]
+      user_id: current_user.id
     )
     if pet.save
       render json: { message: "Pet successfully created!" }, status: :created

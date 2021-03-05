@@ -2,7 +2,6 @@ class Api::UsersController < ApplicationController
 
   before_action :authenticate_user, except: [:show]
 
-  
   # create new user
   def create
     user = User.new(
@@ -30,7 +29,10 @@ class Api::UsersController < ApplicationController
     @user = User.find_by(id: user_id)
 
     @user.email = params[:email] || @user.email
-    @user.password = params[:password] || @user.password
+    if params[:password]
+      @user.password = params[:password]
+      @user.password_confirmation = params[:password_confirmation]
+    end
     @user.username = params[:username] || @user.username
     @user.image_url = params[:image_url] || @user.image_url
 
