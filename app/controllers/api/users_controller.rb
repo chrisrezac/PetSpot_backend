@@ -1,19 +1,19 @@
 class Api::UsersController < ApplicationController
 
-  before_action :authenticate_user, except: [:show]
+  before_action :authenticate_user, except: [:create]
 
   # create new user
   def create
-    user = User.new(
+    @user = User.new(
       email: params[:email],
       password: params[:password],
       password_confirmation: params[:password_confirmation],
       username: params[:username]
     )
-    if user.save
-      render json: { message: "User successfully created!" }, status: :created
+    if @user.save
+      render "show.json.jb", status: :created
     else
-      render json: { errors: user.errors.full_messages }, status: :bad_request
+      render json: { errors: @user.errors.full_messages }, status: :bad_request
     end
   end
 
@@ -28,26 +28,36 @@ class Api::UsersController < ApplicationController
     user_id = params[:id]
     @user = User.find_by(id: user_id)
 
-    @user.email = params[:email] || @user.email
-    if params[:password]
-      @user.password = params[:password]
-      @user.password_confirmation = params[:password_confirmation]
-    end
-    @user.username = params[:username] || @user.username
-    @user.image_url = params[:image_url] || @user.image_url
+    if @user.id == current_user.id
+      @user.email = params[:email] || @user.email
+      if params[:password]
+        @user.password = params[:password]
+        @user.password_confirmation = params[:password_confirmation]
+      end
+      @user.username = params[:username] || @user.username
+      @user.image_url = params[:image_url] || @user.image_url
 
-    if @user.save
-      render "show.json.jb"
+      if @user.save
+        render "show.json.jb"
+      else
+        render json: { errors: @user.errors.full_messages }, status: 422
+      end
     else
-      render json: {errors: @user.errors.full_messages}, status: 422
+      render json: { errors: "unauthorized"}, status: 401
     end
   end
 
   # delete user
   def destroy
-    user = User.find_by(id: params[:id])
-    user.destroy
-    render json: {message: "User successfully deleted!"}
+    user_id = params[:id]
+    @user = User.find_by(id: user_id)
+
+    if @user.id == current_user.id
+      @user.destroy
+      render json: {message: "User successfully deleted!"}
+    else
+      render json: { errors: @user.errors.full_messages }, status: :bad_request
+    end
   end
 
 end

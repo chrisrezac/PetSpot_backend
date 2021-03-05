@@ -1,4 +1,10 @@
-{
+user = {
   username: @user.username,
-  image_url: @user.image_url
+  email: @user.email,
+  image_url: @user.image_url,
+  id: @user.id
 }
+user[:pets] = {
+  pets: @user.pets
+}
+user

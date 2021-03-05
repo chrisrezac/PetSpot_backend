@@ -2,4 +2,7 @@ pet = render partial: "pet.json.jb", locals: { pet: @pet }
 pet[:owner] = {
   username: @pet.user.username
 }
+pet[:posts] = {
+  posts: @pet.posts
+}
 pet

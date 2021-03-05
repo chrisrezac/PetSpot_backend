@@ -7,4 +7,7 @@ post = {
 post[:pet] = {
   pet_name: @post.pet.name,
 }
+post[:comments] = {
+  comment: @post.comments
+}
 post
