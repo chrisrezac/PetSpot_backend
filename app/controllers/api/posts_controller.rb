@@ -1,4 +1,7 @@
 class Api::PostsController < ApplicationController
+
+  before_action :authenticate_user, except: [:show]
+
   # post show
   def show
     post_id = params[:id]

@@ -1,6 +1,7 @@
 class Api::UsersController < ApplicationController
 
   before_action :authenticate_user, except: [:show]
+
   
   # create new user
   def create

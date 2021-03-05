@@ -1,4 +1,7 @@
 class Api::CommentsController < ApplicationController
+
+  before_action :authenticate_user
+
   # comment create
   def create
     comment = Comment.new(

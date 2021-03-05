@@ -1,4 +1,7 @@
 class Api::PetsController < ApplicationController
+
+  before_action :authenticate_user, except: [:index, :show]
+
   # pet index
   def index
     @pets = Pet.all
