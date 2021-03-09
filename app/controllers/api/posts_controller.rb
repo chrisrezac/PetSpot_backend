@@ -11,13 +11,13 @@ class Api::PostsController < ApplicationController
 
   # post create
   def create
-    post = Post.new(
+    @post = Post.new(
       title: params[:title],
       body: params[:body],
       image_url: params[:image_url],
       pet_id: params[:pet_id]
     )
-    if post.save
+    if @post.save
       render json: { message: "Post successfully created!" }, status: :created
     else
       render json: { errors: post.errors.full_messages }, status: :bad_request
@@ -42,8 +42,8 @@ class Api::PostsController < ApplicationController
   
   # post delete
   def destroy
-    post = Post.find_by(id: params[:id])
-    post.destroy
+    @post = Post.find_by(id: params[:id])
+    @post.destroy
     render json: { message: "Post successfully destroyed!" }
   end
 

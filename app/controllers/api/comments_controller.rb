@@ -7,7 +7,7 @@ class Api::CommentsController < ApplicationController
     comment = Comment.new(
       body: params[:body],
       post_id: params[:post_id],
-      user_id: params[:user_id]
+      user_id: current_user.id
     )
     if comment.save
       render json: { message: "Comment succesfully created!" },

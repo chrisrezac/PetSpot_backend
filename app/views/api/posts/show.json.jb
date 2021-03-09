@@ -6,7 +6,7 @@ post = {
   pet_id: @post.pet_id
 }
 post[:pet] = {
-  pet_name: @post.pet.name,
+  pet_name: @post.pet.name
 }
 post[:comments] = {
   comment: @post.comments
