@@ -50,7 +50,7 @@ class Api::UsersController < ApplicationController
   # delete user
   def destroy
     user_id = params[:id]
-    @user = User.find_by(id: user_id)
+    user = User.find_by(id: user_id)
 
     if @user.id == current_user.id
       @user.destroy

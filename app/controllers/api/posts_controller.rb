@@ -8,6 +8,7 @@ class Api::PostsController < ApplicationController
     @post = Post.find_by(id: post_id)
     render "show.json.jb"
   end
+
   # post create
   def create
     post = Post.new(
@@ -22,6 +23,7 @@ class Api::PostsController < ApplicationController
       render json: { errors: post.errors.full_messages }, status: :bad_request
     end
   end
+
   # post update
   def update
     post_id = params[:id]
@@ -37,6 +39,7 @@ class Api::PostsController < ApplicationController
       render json: { errors: @post.errors.full_messages }, status: 422
     end
   end
+  
   # post delete
   def destroy
     post = Post.find_by(id: params[:id])
