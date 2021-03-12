@@ -52,6 +52,7 @@ class Api::PetsController < ApplicationController
       else
         render json: {errors: @pet.errors.full_messages}, status: 422
       end
+      # add sad path here
     end
   end
 

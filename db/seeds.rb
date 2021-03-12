@@ -9,37 +9,37 @@
 User.create!([
   {
     email: "chris@email.com",
-    password_digest: "password",
+    password: "password",
     username: "TheDoodChris",
     image_url: "https://scontent.fluk1-1.fna.fbcdn.net/v/t1.0-9/89853536_2484226045015115_6334116892243918848_o.jpg?_nc_cat=104&ccb=3&_nc_sid=09cbfe&_nc_ohc=lj9_G6EdBIgAX_FT67m&_nc_ht=scontent.fluk1-1.fna&oh=e66111c9a56df7cfb83249c156b60f05&oe=605DDD9E"
   },
   {
     email: "charles@email.com",
-    password_digest: "password",
+    password: "password",
     username: "FitGuy",
     image_url: "https://scontent.fluk1-1.fna.fbcdn.net/v/t1.0-9/42304801_1814876038548199_5434339312659333120_n.jpg?_nc_cat=104&ccb=3&_nc_sid=174925&_nc_ohc=WqoVkcW-IJ0AX_Omxri&_nc_ht=scontent.fluk1-1.fna&oh=bdea2cd98569a232ca7c9d6526840b2c&oe=605F3C59"
   },
   {
     email: "jen@email.com",
-    password_digest: "password",
+    password: "password",
     username: "PeachesForLife",
     image_url: "https://scontent.fluk1-1.fna.fbcdn.net/v/t1.0-9/35079093_10211888301586261_3669194177335263232_o.jpg?_nc_cat=102&ccb=3&_nc_sid=174925&_nc_ohc=4pGPr-JhHPIAX9KiRyR&_nc_ht=scontent.fluk1-1.fna&oh=8cb022c21388490225f8706be65c253b&oe=605FAE9E"
   },
   {
     email: "liz@email.com",
-    password_digest: "password",
+    password: "password",
     username: "CoopersMom",
     image_url: "https://scontent.fluk1-1.fna.fbcdn.net/v/t1.0-9/11030315_10153720118816271_7595367368536963351_n.jpg?_nc_cat=100&ccb=3&_nc_sid=cdbe9c&_nc_ohc=olL8L23CpRcAX_RsuNf&_nc_ht=scontent.fluk1-1.fna&oh=5cf67d524631910e8a155928196565ea&oe=605ECE4D"
   },
   {
     email: "robbie@email.com",
-    password_digest: "password",
+    password: "password",
     username: "TattooApprentice",
     image_url: "https://scontent.fluk1-1.fna.fbcdn.net/v/t1.0-9/95781826_145408343690727_7805976797031432192_o.jpg?_nc_cat=108&ccb=1-3&_nc_sid=174925&_nc_ohc=G2UUq98aZWsAX9DtDY3&_nc_ht=scontent.fluk1-1.fna&oh=bfeb7e340b2dd14ba85be2a8eee68850&oe=607282B9"
   },
   {
     email: "max@email.com",
-    password_digest: "password",
+    password: "password",
     username: "UncleMax",
     image_url: "https://scontent.fluk1-1.fna.fbcdn.net/v/t1.0-9/121266357_10158777495773007_3148568197290347494_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=iJkp-Zgx_kEAX8IEgnP&_nc_ht=scontent.fluk1-1.fna&oh=bcb89fbef1f19155df00269ee38d224f&oe=60733483"
   }

@@ -5,6 +5,5 @@
   breed: pet.breed,
   bio: pet.bio,
   image_url: pet.image_url,
-  id: pet.id,
-  user_id: pet.user_id
+  id: pet.id
 }

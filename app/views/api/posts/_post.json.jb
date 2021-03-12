@@ -2,6 +2,5 @@
   title: post.title,
   body: post.body,
   image_url: post.image_url,
-  post_id: post.id,
-  pet_id: post.pet_id
+  id: post.id
 }

@@ -1,6 +1,8 @@
 pet = render partial: "pet.json.jb", locals: { pet: @pet }
 
-pet[:user] = @pet.user.username
-pet[:posts] = @pet.posts
+pet[:user] = render partial: "/api/users/user.json.jb", locals: { user: @pet.user }
+pet[:posts] = @pet.posts.map do |post|
+  render partial: "/api/posts/post.json.jb", locals: { post: post }
+end
 
 pet
