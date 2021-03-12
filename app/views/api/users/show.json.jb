@@ -1,10 +1,5 @@
-user = {
-  username: @user.username,
-  email: @user.email,
-  image_url: @user.image_url,
-  id: @user.id
-}
-user[:pets] = {
-  pets: @user.pets
-}
-user
+user = render partial: "user.json.jb", locals: { user: @user }
+
+user[:pets] = @user.pets
+
+user  

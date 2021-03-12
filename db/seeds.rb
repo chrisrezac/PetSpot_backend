@@ -31,6 +31,18 @@ User.create!([
     username: "CoopersMom",
     image_url: "https://scontent.fluk1-1.fna.fbcdn.net/v/t1.0-9/11030315_10153720118816271_7595367368536963351_n.jpg?_nc_cat=100&ccb=3&_nc_sid=cdbe9c&_nc_ohc=olL8L23CpRcAX_RsuNf&_nc_ht=scontent.fluk1-1.fna&oh=5cf67d524631910e8a155928196565ea&oe=605ECE4D"
   },
+  {
+    email: "robbie@email.com",
+    password_digest: "password",
+    username: "TattooApprentice",
+    image_url: "https://scontent.fluk1-1.fna.fbcdn.net/v/t1.0-9/95781826_145408343690727_7805976797031432192_o.jpg?_nc_cat=108&ccb=1-3&_nc_sid=174925&_nc_ohc=G2UUq98aZWsAX9DtDY3&_nc_ht=scontent.fluk1-1.fna&oh=bfeb7e340b2dd14ba85be2a8eee68850&oe=607282B9"
+  },
+  {
+    email: "max@email.com",
+    password_digest: "password",
+    username: "UncleMax",
+    image_url: "https://scontent.fluk1-1.fna.fbcdn.net/v/t1.0-9/121266357_10158777495773007_3148568197290347494_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=iJkp-Zgx_kEAX8IEgnP&_nc_ht=scontent.fluk1-1.fna&oh=bcb89fbef1f19155df00269ee38d224f&oe=60733483"
+  }
 ])
 
 Pet.create!([
@@ -78,7 +90,25 @@ Pet.create!([
     bio: "The OG cuddle pupper cutie boy Shooting Star",
     image_url: "https://scontent.fluk1-1.fna.fbcdn.net/v/t1.15752-9/p1080x2048/154218382_803458740271284_3787855375705726945_n.jpg?_nc_cat=106&ccb=3&_nc_sid=ae9488&_nc_ohc=SFL0tMY9zOQAX-cZsyC&_nc_ht=scontent.fluk1-1.fna&tp=6&oh=29ff356dfd41c9a0f9ad6e1c6d908cfc&oe=605D9CFC",
     user_id: 4
-  }
+  },
+  {
+    name: "Lilo",
+    animal_type: "Dog",
+    birthday: "2017-11-14",
+    breed: "Border Collie",
+    bio: "Enjoys rolling around in the grass and snow!",
+    image_url: "https://scontent.fluk1-1.fna.fbcdn.net/v/t1.15752-9/159922378_1122303154959418_5354094400203218564_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=ae9488&_nc_ohc=L_c4v1jEjkQAX-0QdvK&_nc_ht=scontent.fluk1-1.fna&oh=5d73a203b8248d78eb769bcaa0b35a97&oe=60701162",
+    user_id: 5
+  },
+  {
+    name: "Nabuchodonosor",
+    animal_type: "Cat",
+    birthday: "2019-11-14",
+    breed: "Egyptian Mau",
+    bio: "Just a young kit with a zest for life, catching flies, and général romping around!",
+    image_url: "https://scontent.xx.fbcdn.net/v/t1.15752-0/p206x206/156474049_743206283047205_7733952471742812965_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=58c789&_nc_ohc=Pj2vK8TjEfYAX-NEiQ8&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=6&oh=d803e4525b8daa4c1d4c77c69c4bad82&oe=60714A4E",
+    user_id: 6
+  },
 ])
 
 Post.create!([

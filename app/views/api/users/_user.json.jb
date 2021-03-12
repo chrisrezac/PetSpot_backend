@@ -1,0 +1,6 @@
+{
+  username: user.username,
+  email: user.email,
+  image_url: user.image_url,
+  user_id: user.id
+}

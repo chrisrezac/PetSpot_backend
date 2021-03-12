@@ -1,5 +1,5 @@
-{
-  body: @comment.body,
-  user_id: @comment.user_id,
-  comment_id: @comment.id
-}
+comment = render partial: "comments.json.jb", locals: { comment: @comment }
+
+comment[:user] = @comment.user.username
+
+comment

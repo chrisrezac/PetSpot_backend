@@ -43,14 +43,14 @@ class Api::UsersController < ApplicationController
         render json: { errors: @user.errors.full_messages }, status: 422
       end
     else
-      render json: { errors: "unauthorized"}, status: 401
+      render json: { errors: "unauthorized" }, status: 401
     end
   end
 
   # delete user
   def destroy
     user_id = params[:id]
-    user = User.find_by(id: user_id)
+    @user = User.find_by(id: user_id)
 
     if @user.id == current_user.id
       @user.destroy
