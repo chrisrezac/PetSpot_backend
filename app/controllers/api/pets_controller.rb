@@ -50,9 +50,10 @@ class Api::PetsController < ApplicationController
       if @pet.save
         render "show.json.jb"
       else
-        render json: {errors: @pet.errors.full_messages}, status: 422
+        render json: { errors: @pet.errors.full_messages }, status: 422
       end
-      # add sad path here
+    else
+      render json: { errors: "unauthorized" }, status: 401
     end
   end
 
@@ -63,9 +64,9 @@ class Api::PetsController < ApplicationController
 
     if current_user.id == @pet.user_id
       @pet.destroy
-      render json: {message: "Pet successfully deleted!"}
+      render json: { message: "Pet successfully deleted!"}
     else
-      render json: { errors: "unauthorized"}, status: 401
+      render json: { errors: "unauthorized" }, status: 401
     end
   end
 

@@ -22,12 +22,18 @@ class Api::CommentsController < ApplicationController
   def update
     comment_id = params[:id]
     @comment = Comment.find_by(id: comment_id)
-    @comment.body = params[:body] || @comment.body
-    if @comment.save
-      render "show.json.jb"
+    if current_user.id == @comment.user_id
+
+      @comment.body = params[:body] || @comment.body
+
+      if @comment.save
+        render "show.json.jb"
+      else
+        render json: { errors: @comment.error.full_messages },
+        status: 422
+      end
     else
-      render json: { errors: @comment.error.full_messages },
-      status: 422
+      render json: { errors: "unauthorized" }, status: 401
     end
   end
   
