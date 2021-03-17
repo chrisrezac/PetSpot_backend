@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     delete "/pets/:id" => "pets#destroy"
 
     # post show, create, update, destroy
+    get "/posts" => "posts#index"
     get "/posts/:id" => "posts#show"
     post "/posts" => "posts#create"
     patch "/posts/:id" => "posts#update"

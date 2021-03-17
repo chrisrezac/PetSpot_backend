@@ -105,10 +105,19 @@ Pet.create!([
     animal_type: "Cat",
     birthday: "2019-11-14",
     breed: "Egyptian Mau",
-    bio: "Just a young kit with a zest for life, catching flies, and général romping around!",
+    bio: "Just a young kit with a zest for life, catching flies, and general romping around!",
     image_url: "https://scontent.xx.fbcdn.net/v/t1.15752-0/p206x206/156474049_743206283047205_7733952471742812965_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=58c789&_nc_ohc=Pj2vK8TjEfYAX-NEiQ8&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=6&oh=d803e4525b8daa4c1d4c77c69c4bad82&oe=60714A4E",
     user_id: 6
   },
+  {
+    name: "JJ",
+    animal_type: "Cat",
+    birthday: "2019-12-01",
+    breed: "Short-Hair",
+    bio: "Bundle of love with a habit for late night bouts of energy!",
+    image_url: "https://scontent.fluk1-1.fna.fbcdn.net/v/t1.15752-9/160987201_439030453847959_6818856643644101723_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=ae9488&_nc_ohc=xwTwIvcluq0AX_fUXR7&_nc_ht=scontent.fluk1-1.fna&oh=8719fdebb2a38dd9e3d909196daf55f1&oe=607749C2",
+    user_id: 1
+  }
 ])
 
 Post.create!([
