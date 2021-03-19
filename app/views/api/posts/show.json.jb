@@ -4,6 +4,7 @@ post[:pet] = render partial: "/api/pets/pet.json.jb", locals: { pet: @post.pet }
 post[:comments] = @post.comments.map do |comment|
   json = render partial: "/api/comments/comment.json.jb", locals: { comment: comment }
   json[:user] = render partial: "/api/users/user.json.jb", locals: { user: comment.user }
+  json
 end
 
 post

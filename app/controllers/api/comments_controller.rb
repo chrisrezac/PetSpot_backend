@@ -13,7 +13,7 @@ class Api::CommentsController < ApplicationController
       render json: { message: "Comment succesfully created!" },
       status: :created
     else
-      render json: { errors: comment.errors.full_messages},
+      render json: { errors: @comment.errors.full_messages},
       status: :bad_request
     end
   end
