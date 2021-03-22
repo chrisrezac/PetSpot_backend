@@ -2,6 +2,12 @@ class Api::CommentsController < ApplicationController
 
   before_action :authenticate_user
 
+  def show
+    comment_id = params[:id]
+    @comment = Comment.find_by(id: comment_id)
+    render "show.json.jb"
+  end
+
   # comment create
   def create
     @comment = Comment.new(

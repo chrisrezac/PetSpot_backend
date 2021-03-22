@@ -1,6 +1,6 @@
 class Api::PostsController < ApplicationController
 
-  before_action :authenticate_user, except: [:show]
+  before_action :authenticate_user, except: [:show, :index]
 
   # post show
   def index

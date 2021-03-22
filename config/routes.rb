@@ -24,6 +24,8 @@ Rails.application.routes.draw do
     delete "/posts/:id" => "posts#destroy"
 
      # comment create, update, and destroy
+
+    get "/comments/:id" => "comments#show"
     post "/comments" => "comments#create"
     patch "/comments/:id" => "comments#update"
     delete "/comments/:id" => "comments#destroy"
