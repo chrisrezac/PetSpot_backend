@@ -192,7 +192,7 @@ Pet.create!([
   },
   {
     name: "Buddy",
-    animal_type: "Air Bud",
+    animal_type: "Dog",
     birthday: "2017-01-01",
     breed: "Golden Receiver",
     bio: "Very sporty and loves ice cream!",
@@ -250,6 +250,12 @@ Post.create!([
     body: "Nabuchodonosor just doing Nabuchodonosor things",
     image_url: "https://scontent.fluk1-1.fna.fbcdn.net/v/t1.15752-9/162740702_375745540053263_4002081432166921581_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=ae9488&_nc_ohc=YuuJeIF11dEAX-2l61u&_nc_ht=scontent.fluk1-1.fna&oh=b8898559580c252ddb9952a9ff68c1ab&oe=6082662C",
     pet_id: 7
+  },
+  {
+    title: "He shoots, and he scores!",
+    body: "Airbud can dunk!",
+    image_url: "https://scontent.fluk1-1.fna.fbcdn.net/v/t1.15752-9/93245412_3752626151475307_6196067842962489344_n.png?_nc_cat=105&ccb=1-3&_nc_sid=ae9488&_nc_ohc=BLTYeWlI7HgAX9NQGmG&_nc_ht=scontent.fluk1-1.fna&oh=321354c3df450ed2e5bd1234254d76bf&oe=6081C764",
+    pet_id: 15
   }
 
 ])
